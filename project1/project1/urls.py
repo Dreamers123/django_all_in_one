@@ -22,3 +22,17 @@ urlpatterns = [
     url('admin/', admin.site.urls),
     url(r'^posts/', include('posts.urls')),
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+

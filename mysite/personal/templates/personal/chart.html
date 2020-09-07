@@ -1,0 +1,66 @@
+<html>
+
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+<body>
+<div style=text-align:center;>
+<div id="myChart">
+<script>
+
+	var state ={
+		'items':['Abeer','Azad','Tanzila','Piru','Nowra','Nami'],
+		'values':[10,20,30,40,50,60],
+	}
+
+{#	var objId = "{{question.id}}"#}
+{##}
+{#	var dataURL = `/polls/resultsdata/${objId}/`#}
+{#	$.ajax({#}
+{#		method:'GET',#}
+{#		url:dataURL,#}
+{#		success:function(response){#}
+{#			console.log('RESPONSE:', response)#}
+{#			for (var i in response){#}
+{##}
+{#				var key = Object.keys(response[i])[0]#}
+{#				var value = Object.values(response[i])[0]#}
+{##}
+{#				state.items.push(key)#}
+{#				state.values.push(value)#}
+{#			}#}
+{##}
+{#			console.log('STATE:', state)#}
+{#			buildChart()#}
+{##}
+{#		}#}
+{#	})#}
+    console.log('RESPONSE:', state.items)
+    console.log('RESPONSE:', state.values)
+	function buildChart(){
+			var chartData = {
+			"type":"bar",
+			"scale-x":{
+				"values":state.items
+			},
+			"series":[
+				{
+					"values":state.values
+				}
+			]
+		}
+
+
+		zingchart.render({
+		  id: "myChart",
+		  data: chartData,
+		});
+	}
+buildChart()
+</script>
+   </div>
+    </div>
+</body>
+</html>
