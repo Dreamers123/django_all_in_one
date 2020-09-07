@@ -1,0 +1,13 @@
+
+pip install virtualenvwrapper-win
+
+Then Go to The Created Project Directory
+mkvirtualenv py1
+
+workon py1
+
+pip install django
+
+creating project : $ django-admin startproject mysite
+
+creating app : $ python manage.py startapp polls
