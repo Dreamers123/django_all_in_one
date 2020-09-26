@@ -139,10 +139,11 @@ class ObtainAuthTokenView(APIView):
 
 
 
-
-
-
-
+@api_view(['GET',])
+def test_view(request):
+    data={}
+    data['No Word Found'] = 'successfully registered new user.'
+    return Response(data)
 
 
 

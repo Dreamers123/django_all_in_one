@@ -1,10 +1,9 @@
 from rest_framework import serializers
 
 from account.models import Account
-
+from snippets.models import Snippet
 
 class RegistrationSerializer(serializers.ModelSerializer):
-
 	password2 				= serializers.CharField(style={'input_type': 'password'}, write_only=True)
 
 	class Meta:
@@ -31,10 +30,9 @@ class RegistrationSerializer(serializers.ModelSerializer):
 
 
 class AccountPropertiesSerializer(serializers.ModelSerializer):
-
-	class Meta:
-		model = Account
-		fields = ['pk', 'email', 'username', ]
+	 class Meta:
+		 model = Account
+		 fields = ['pk', 'email', 'username', ]
 
 
 
